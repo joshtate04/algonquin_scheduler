@@ -50,6 +50,13 @@ rails s
 rails s -d
 ```
 * Open browser and go to localhost:3000
+* To restart your server (inside project directory)
+```
+#!bash
+kill -9 $(cat tmp/pids/server.pid)
+rails s -d
+```
+
 
 ### LINUX ###
 * Make sure you are running Ruby v2.2.1 (using ruby -v)
@@ -101,3 +108,9 @@ rails s
 rails s -d
 ```
 * Open browser and go to localhost:3000
+* To restart your server (inside project directory)
+```
+#!bash
+kill -9 $(cat tmp/pids/server.pid)
+rails s -d
+```
