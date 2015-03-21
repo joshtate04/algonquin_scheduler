@@ -1,0 +1,9 @@
+<% if @success %>
+    window.location = "/";
+<% else %>
+    <% if @system_error %>
+        $('#error_text').html('Sorry, something went wrong <% if Rails.env.development? %><br/><%= escape_javascript(@message.to_s).html_safe %><% end %>');
+    <% else %>
+        $('#error_text').html('Invalid username or password');
+    <% end %>
+<% end %>
