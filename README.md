@@ -114,3 +114,6 @@ rails s -d
 kill -9 $(cat tmp/pids/server.pid)
 rails s -d
 ```
+
+### WINDOWS ###
+loljk
