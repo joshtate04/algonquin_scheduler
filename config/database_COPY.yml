@@ -56,9 +56,7 @@ production:
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password: root
   host: localhost
   database: alg_scheduler_PROD
-  username: alg_scheduler
+  username: root
   password: 2385FEFCADC35223DF68158D7B46F39DDC39C8D9

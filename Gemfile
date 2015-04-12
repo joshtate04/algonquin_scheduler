@@ -31,7 +31,7 @@ gem 'httparty'
 gem 'devise'
 
 gem 'savon'
-gem 'thin'
+gem 'unicorn'
 gem 'uglifier'
 
 
