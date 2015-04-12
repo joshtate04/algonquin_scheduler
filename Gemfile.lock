@@ -197,6 +197,9 @@ GEM
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (2.7.1)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     uuid (2.3.7)
       macaddr (~> 1.0)
     warden (1.2.3)
@@ -230,4 +233,5 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   thin
+  uglifier
   web-console (~> 2.0)
