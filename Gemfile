@@ -31,6 +31,7 @@ gem 'httparty'
 gem 'devise'
 
 gem 'savon'
+gem 'thin'
 
 
 group :development, :test do
