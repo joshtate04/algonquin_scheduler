@@ -3,6 +3,16 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_filter :block_devise
+
+  def block_devise
+    if params[:controller].start_with? "devise/"
+      if params[:action] != "destroy" && params[:controller] != "devise/sessions"
+         redirect_to "/" and return
+      end
+    end
+  end
+
   def index
     render layout: layout_name
   end

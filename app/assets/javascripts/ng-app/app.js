@@ -1,31 +1,14 @@
-angular.module("Scheduler",["ngAnimate","ui.router","templates"])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-        $stateProvider
-            .state('home', {
-                url: '/', templateUrl: 'home.html', controller: 'HomeController'
-            })
-            .state('dashboard', {
-                abstract: true,
-                url: '/dashboard',
-                templateUrl: 'dashboard/layout.html'
-            })
-            // the default route when someone hits dashboard
-            .state('dashboard.one', {
-                url: '',
-                templateUrl: 'dashboard/one.html'
-            })
-            // this is /dashboard/two
-            .state('dashboard.two', {
-                url: '/two',
-                templateUrl: 'dashboard/two.html'
-            })
-            // this is /dashboard/three
-            .state('dashboard.three', {
-                url: '/three',
-                templateUrl: 'dashboard/three.html'
-            });
+var app = angular.module("Scheduler",["ngAnimate","ui.router","templates","ngResource","ngRoute",'mgcrea.ngStrap']);
 
-        $urlRouterProvider.otherwise('/');
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    $stateProvider
+        .state('home', {
+            url: '/', templateUrl: 'home.html', controller: 'HomeController'
+        })
+        .state('courses',{abstract: true, url: '/courses', templateUrl: "courses/layout.html", controller: "CoursesController"})
+        .state('courses.index', {url: '', templateUrl: "courses/index.html", controller: "CoursesController"})
+        .state('courses.show',{url: '/:id', templateUrl: 'courses/show.html', controller: "CoursesController"});
+    $urlRouterProvider.otherwise('/');
 
-        $locationProvider.html5Mode({enabled: true, requireBase: false});
-    });
+    $locationProvider.html5Mode({enabled: true, requireBase: false});
+});

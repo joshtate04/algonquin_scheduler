@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails scheduler_w_angular: development" uuid="a9ddc9cd-c7f4-402a-896b-d3cfbe6b04fe">
+      <user-name>root</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <schema-pattern>alg_scheduler_DEV.*</schema-pattern>
+      <default-schemas>alg_scheduler_DEV.*</default-schemas>
+    </data-source>
+    <data-source name="Rails scheduler_w_angular: test" uuid="19ce486b-cd73-44aa-8546-07b878c1fc3d">
+      <user-name>root</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <schema-pattern>alg_scheduler_TEST.*</schema-pattern>
+      <default-schemas>alg_scheduler_TEST.*</default-schemas>
+    </data-source>
+  </component>
+</project>

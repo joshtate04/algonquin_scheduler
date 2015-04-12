@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SchedulerWAngular</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <title>Algonquin Scheduler</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <% if params[:controller] == "sessions" %>
+  	<style>
+		.bg-alg {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-image: url("/images/ACCE.jpg");
+			background-size: cover;
+			background-position: center center;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+  <% end %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="Scheduler">
+
+<% if params[:controller] == "sessions" %>
+    <div class="bg-alg"></div>
+<% end %>
 
 <%= yield %>
 
