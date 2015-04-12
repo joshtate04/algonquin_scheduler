@@ -32,6 +32,7 @@ gem 'devise'
 
 gem 'savon'
 gem 'thin'
+gem 'uglifier'
 
 
 group :development, :test do
