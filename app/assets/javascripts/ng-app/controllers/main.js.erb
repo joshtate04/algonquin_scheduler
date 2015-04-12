@@ -1,0 +1,191 @@
+app.controller("MainController", ['$scope','$stateParams', 'User','Day','Meeting',
+    function($scope,$stateParams,User,Day,Meeting) {
+        //$scope.courses = Course.query();
+        $scope.current_user = User.current();
+
+		$scope.days = Day.getThisWeek();
+
+		 $scope.placeholder_days = [
+			{
+				name: "Monday",
+				date: "",
+				today: ''
+			},
+			{
+				name: "Tuesday",
+				date: "",
+				today: ''
+			},
+			{
+				name: "Wednesday",
+				date: "",
+				today: ''
+			},
+			{
+				name: "Thursday",
+				date: "",
+				today: ''
+			},
+			{
+				name: "Friday",
+				date: "",
+				today: ''
+			}
+		];
+		
+		$scope.time_slots = [
+			{time: "12:00 AM", class_name: "time_12am"},
+			{time: "12:30 AM", class_name: "time_1230am"},
+			{time: "1:00 AM", class_name: "time_1am"},
+			{time: "1:30 AM", class_name: "time_130am"},
+			{time: "2:00 AM", class_name: "time_2am"},
+			{time: "2:30 AM", class_name: "time_230am"},
+			{time: "3:00 AM", class_name: "time_3am"},
+			{time: "3:30 AM", class_name: "time_330am"},
+			{time: "4:00 AM", class_name: "time_4am"},
+			{time: "4:30 AM", class_name: "time_430am"},
+			{time: "5:00 AM", class_name: "time_5am"},
+			{time: "5:30 AM", class_name: "time_530am"},
+			{time: "6:00 AM", class_name: "time_6am"},
+			{time: "6:30 AM", class_name: "time_630am"},
+			{time: "7:00 AM", class_name: "time_7am"},
+			{time: "7:30 AM", class_name: "time_730am"},
+			{time: "8:00 AM", class_name: "time_8am"},
+			{time: "8:30 AM", class_name: "time_830am"},
+			{time: "9:00 AM", class_name: "time_9am"},
+			{time: "9:30 AM", class_name: "time_930am"},
+			{time: "10:00 AM", class_name: "time_10am"},
+			{time: "10:30 AM", class_name: "time_1030am"},
+			{time: "11:00 AM", class_name: "time_11am"},
+			{time: "11:30 AM", class_name: "time_1130am"},
+			{time: "12:00 PM", class_name: "time_12pm"},
+			{time: "12:30 PM", class_name: "time_1230pm"},
+			{time: "1:00 PM", class_name: "time_1pm"},
+			{time: "1:30 PM", class_name: "time_130pm"},
+			{time: "2:00 PM", class_name: "time_2pm"},
+			{time: "2:30 PM", class_name: "time_230pm"},
+			{time: "3:00 PM", class_name: "time_3pm"},
+			{time: "3:30 PM", class_name: "time_330pm"},
+			{time: "4:00 PM", class_name: "time_4pm"},
+			{time: "4:30 PM", class_name: "time_430pm"},
+			{time: "5:00 PM", class_name: "time_5pm"},
+			{time: "5:30 PM", class_name: "time_530pm"},
+			{time: "6:00 PM", class_name: "time_6pm"},
+			{time: "6:30 PM", class_name: "time_630pm"},
+			{time: "7:00 PM", class_name: "time_7pm"},
+			{time: "7:30 PM", class_name: "time_730pm"},
+			{time: "8:00 PM", class_name: "time_8pm"},
+			{time: "8:30 PM", class_name: "time_830pm"},
+			{time: "9:00 PM", class_name: "time_9pm"},
+			{time: "9:30 PM", class_name: "time_930pm"},
+			{time: "10:00 PM", class_name: "time_10pm"},
+			{time: "10:30 PM", class_name: "time_1030pm"},
+			{time: "11:00 PM", class_name: "time_11pm"},
+			{time: "11:30 PM", class_name: "time_1130pm"}
+		];
+
+		$scope.selectEvent = function(event){
+			if (!$('#event_'+event.id).hasClass('active')){
+				$scope.deselect();
+			}
+			setTimeout(function(){
+				$('#event_' + event.id).addClass('active');
+			},10);
+		};
+
+		$scope.viewEvent = function(event){
+			if (!$('#event_'+event.id).hasClass('active')){
+				$scope.deselect();
+			}
+			setTimeout(function(){
+				$('#event_' + event.id).addClass('active').popover('show');
+			},10);
+		};
+
+		$scope.unview = function(){
+			$('.event').popover('hide');
+		};
+		$scope.deselect = function(){
+			$('.event').removeClass('active');
+			$scope.unview();
+		};
+		$scope.selectEvent = function(event){
+			$scope.deselect();
+			setTimeout(function() {
+				$('#event_' + event.id).addClass('active');
+			},1);
+		};
+
+		$scope.next_week = function(){
+			$scope.start_date.setDate($scope.start_date.getDate() + 7);
+			$scope.end_date.setDate($scope.end_date.getDate() + 7);
+			$scope.current_date.setDate($scope.current_date.getDate() + 7);
+			$scope.days = Day.getWeek({date: $scope.current_date});
+		};
+		$scope.previous_week = function(){
+			$scope.start_date.setDate($scope.start_date.getDate() - 7);
+			$scope.end_date.setDate($scope.end_date.getDate() - 7);
+			$scope.current_date.setDate($scope.current_date.getDate() - 7);
+			$scope.days = Day.getWeek({date: $scope.current_date});
+		};
+
+		$scope.viewEvent = function(event){
+			setTimeout(function(){
+				$('#event_'+event.id).popover('show');
+			}, 300);
+		};
+
+		$scope.current_date = new Date(current_date_from_server);
+		$scope.start_end_dates = function(date){
+			$scope.start_date = new Date();
+			$scope.end_date = new Date();
+			switch (date.getDay()){
+				case 0:
+					$scope.start_date.setDate($scope.current_date.getDate() + 1);
+					$scope.end_date.setDate($scope.current_date.getDate() + 5);
+					break;
+				case 1:
+					$scope.start_date.setDate($scope.current_date.getDate());
+					$scope.end_date.setDate($scope.current_date.getDate() + 4);
+					break;
+				case 2:
+					$scope.start_date.setDate($scope.current_date.getDate() - 1);
+					$scope.end_date.setDate($scope.current_date.getDate() + 3);
+					break;
+				case 3:
+					$scope.start_date.setDate($scope.current_date.getDate() - 2);
+					$scope.end_date.setDate($scope.current_date.getDate() + 2);
+					break;
+				case 4:
+					$scope.start_date.setDate($scope.current_date.getDate() - 3);
+					$scope.end_date.setDate($scope.current_date.getDate() + 1);
+					break;
+				case 5:
+					$scope.start_date.setDate($scope.current_date.getDate() - 4);
+					$scope.end_date.setDate($scope.current_date.getDate());
+					break;
+				case 6:
+					$scope.start_date.setDate($scope.current_date.getDate() - 5);
+					$scope.end_date.setDate($scope.current_date.getDate() - 1);
+					break;
+			}
+		};
+
+		$scope.start_end_dates($scope.current_date);
+	}
+]);
+
+app.filter('minutes',function(){
+	return function (n) {
+		var num = parseInt(n, 10);
+		len = parseInt(2, 10);
+		if (isNaN(num) || isNaN(2)) {
+			return n;
+		}
+		num = ''+num;
+		while (num.length < 2) {
+			num = '0'+num;
+		}
+		return num;
+	};
+});
