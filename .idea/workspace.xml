@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a370a0-1e87-4ecf-90dd-91710940b7da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-override.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-override.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="scheduler_w_angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,6 +76,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36885247" vertical-offset="0" max-vertical-offset="1342">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="bootstrap-override.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-override.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,21 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap-theme.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bootstrap-theme.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33307984" vertical-offset="372" max-vertical-offset="6060">
+            <state vertical-scroll-proportion="-16.222221" vertical-offset="372" max-vertical-offset="6060">
               <caret line="54" column="21" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modal.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/modal.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="390">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -184,7 +184,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/ng-app/_globals.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/ng-app/_dashboard.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/ng-app/main.css.scss" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20150321033800_add_data_to_user.rb" />
         <option value="$PROJECT_DIR$/app/views/application/remote_sign_in.js.erb" />
         <option value="$PROJECT_DIR$/app/assets/templates/navbar.html.erb" />
@@ -223,6 +222,7 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-override.css" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -1048,14 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/models/event_data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
@@ -1176,8 +1168,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33307984" vertical-offset="372" max-vertical-offset="6060">
+        <state vertical-scroll-proportion="-16.222221" vertical-offset="372" max-vertical-offset="6060">
           <caret line="54" column="21" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36885247" vertical-offset="0" max-vertical-offset="1342">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding />
         </state>
       </provider>
