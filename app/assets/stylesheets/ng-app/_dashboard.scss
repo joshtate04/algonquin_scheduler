@@ -1,7 +1,8 @@
 @import "compass";
 
-.dashboard-view-container {
+.dashboard-view-container{
   position: relative;
 }
-.dashboard-ui-view {
+.dashboard-ui-view{
+  @extend .main-view-container;
 }
