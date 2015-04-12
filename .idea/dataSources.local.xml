@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - alg_scheduler_DEV@localhost" uuid="c13ec88c-a797-413e-8044-2c97e2b02680">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>alg_scheduler_DEV.*</schema-pattern>
+      <default-schemas>alg_scheduler_DEV.*</default-schemas>
+    </data-source>
+  </component>
+</project>

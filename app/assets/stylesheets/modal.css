@@ -1,0 +1,21 @@
+.modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    height: 100%;
+}
+
+.modal-content {
+    height: 100%;
+    position: relative;
+}
+
+.modal-body {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}

@@ -7,16 +7,21 @@ Rails.application.routes.draw do
     end
 
     unauthenticated :user do
-      root :to => "devise/sessions#new", as: :unauthenticated_root
+      root :to => "sessions#new", as: :unauthenticated_root
     end
 
     authenticate :user do
-      get "*path.html" => "application#index", :layout => 0
-      get '*path' => 'application#index'
+      get '/logout' => 'sessions#logout'
     end
 
-    root to: "application#index"
   end
 
-  post '/remote_sign_in' => 'application#remote_sign_in', as: :remote_sign_in
+  namespace :api do
+    get '/users' => 'users#index'
+
+    get '/days' => 'days#show'
+    get '/days/current_date' => 'days#current_date'
+  end
+
+  post '/remote_sign_in' => 'sessions#login', as: :remote_sign_in
 end
