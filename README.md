@@ -1,5 +1,8 @@
 # README #
 
+## LIVE VERSION OF APP ##
+###[Link to app](http://104.131.185.60)###
+
 ## Setting this app up on your machine ##
 
 ### OS X ###
