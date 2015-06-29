@@ -120,3 +120,17 @@ rails s -d
 
 ### WINDOWS ###
 loljk
+
+
+## TEAM MEMBERS ##
+#### Rails API ####
+Josh Tate (Team Lead)
+
+#### Android ####
+Kyle Lefebvre, Patrick Figley
+
+#### Angular ####
+Amanda Tom, Mannat Luthra, Josh Tate
+
+#### iOS ####
+Evan Grisel
